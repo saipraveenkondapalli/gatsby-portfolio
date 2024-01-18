@@ -9,7 +9,7 @@ import * as React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
 import NavBar from "./header"
-import "./layout.css"
+
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

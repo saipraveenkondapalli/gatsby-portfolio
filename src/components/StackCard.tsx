@@ -22,7 +22,7 @@ const StackCard: React.FC<IStackCard> = ({ stack }) => {
         display="flex"
         role="group"
         _hover={{
-          borderColor: "blue.500"
+          borderColor: "blue.500",
         }}
       >
         <Flex alignItems="center" justifyContent="space-between">
@@ -34,7 +34,7 @@ const StackCard: React.FC<IStackCard> = ({ stack }) => {
             icon={stack?.icon}
           />
           <LinkOverlay href={stack?.url} rel="noopener" isExternal>
-            <Flex>
+            <Flex alignItems="center">
               <Text size="sm" _hover={{ color: "blue.500" }}>
                 {stack?.name}
               </Text>
@@ -43,7 +43,7 @@ const StackCard: React.FC<IStackCard> = ({ stack }) => {
         </Flex>
       </LinkBox>
     </MotionBox>
-  )
-}
+  );
+};
 
-export default StackCard
+export default StackCard;
