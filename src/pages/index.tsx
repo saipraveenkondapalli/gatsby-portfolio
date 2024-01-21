@@ -10,12 +10,12 @@ import { SideProjectSection } from "../components/index/Projects"
 
 const IndexPage = () => (
   <Layout>
-    <Container maxW="container.lg"  mt={["5", "10"]} mb={["5", "10"]}>
+    <Container maxW="container.lg" mt={["5", "10"]} mb={["5", "10"]}>
       <ProfileSection />
       <Divider my={10} />
-      <TechStack/>
+      <TechStack />
       <Divider my={10} />
-      <SideProjectSection/>
+      <SideProjectSection />
     </Container>
   </Layout>
 )

@@ -64,13 +64,13 @@ const NavBar = () => {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={"center"}>
-            <Avatar
+            <Link to={"/"}><Avatar
               as={CharkaLink}
               size="sm"
-              to="/"
-              src="/profile_picture.png"
+
+              src="https://saipraveen.me/assets/img/profile1.png"
               _hover={{ borderColor: "blue.500" }}
-            />
+            /></Link>
             <HStack as="nav" spacing="4" display={{ base: "none", md: "flex" }}>
               {navItem}
             </HStack>

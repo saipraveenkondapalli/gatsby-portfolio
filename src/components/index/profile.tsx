@@ -67,7 +67,7 @@ const ProfileSection: React.FC<IProfileSection> = () => {
               Contact Me
             </Button>
           </Link>
-          <Link href={"https://services.saipraveen.me/api/resume"} isExternal={true} style={{ textDecoration: "none" }}>
+          <Link href={"https://bit.ly/saipraveen-resume"} isExternal={true} style={{ textDecoration: "none" }}>
             <Button
               colorScheme="blue"
               size="sm"

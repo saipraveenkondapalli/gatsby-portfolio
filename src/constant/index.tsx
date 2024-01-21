@@ -3,6 +3,15 @@ import * as React from "react"
 import studentClubImg from "../images/studentClub.jpg"
 // @ts-ignore
 import interviewPrepPro from "../images/interviewPrepPro.jpg"
+// @ts-ignore
+import pragatiLogo from "../images/pragati.png"
+// @ts-ignore
+import adityaLogo from "../images/aditya.png"
+// @ts-ignore
+import umassLogo from "../images/umass.svg"
+// @ts-ignore
+import IcLogo from "../images/inheritcloud.webp"
+
 import { FaDatabase, FaGitAlt, FaJs, FaReact } from "react-icons/fa"
 import { FaC, FaJava, FaPython } from "react-icons/fa6"
 import {
@@ -23,8 +32,6 @@ import {
 
 const menuLinks = [
   { name: "About Me", route: "/about" },
-  { name: "Github", route: "/github" },
-  { name: "Articles", route: "/article" },
   { name: "Contact", route: "/contact" }
 ]
 
@@ -159,7 +166,7 @@ const sideProjects = [
       <SiMongodb fontSize="20px" />,
       <SiBootstrap fontSize="20px" />,
       <SiGoogle fontSize="20px" />,
-      <FaJs fontSize="20px" />,
+      <FaJs fontSize="20px" />
 
 
     ]
@@ -176,8 +183,62 @@ const sideProjects = [
       <FaPython fontSize="20px" />,
       <SiFlask fontSize="20px" />,
       <SiBootstrap fontSize="20px" />,
-      <FaJs fontSize="20px" />,
+      <FaJs fontSize="20px" />
     ]
+  }
+]
+
+const companies = [
+  {
+    title: "InheritCloud",
+    alt: "inheritCloud",
+    url: "https://www.inheritcloud.com/",
+    role: "Software Developer, Freelance",
+    skills: ["React", "Bootstrap", "Vite", "Python", "Flask", "SSO", "Google Login"],
+    period: "Oct 2023 - Jan 2024",
+    logo: IcLogo
+  }
+]
+
+
+const educations = [
+  {
+    title: "Pragati Engineering College, Jawaharlal Nehru Technological University, Kakinada",
+    alt: "jntuk image",
+    url: "https://pragati.ac.in",
+    role: "Bachelor's Degree inTechnology (Electronics and Communication Engineering",
+    skills: ["CGPA - 8.3/10"],
+    period: "Aug 2019 - June 2023",
+    logo: pragatiLogo
+  },
+  {
+    title: "Aditya Junior College, Board of Intermediate Education, Andhra Pradesh",
+    alt: "aditya image",
+    url: "https://aditya.ac.in/jrcollege/",
+    role: "MPC- Mathematics, Physics, Chemistry",
+    skills: ["CGPA - 10/10", "Maths ", "Physics", "Chemistry"],
+    period: "June 2018 - April 2019",
+    logo: adityaLogo
+  }
+]
+
+const achivements = [
+  { "name": "Global Entrepreneurship Exchange 2021",
+    "competition" : "Business Pitch Competition",
+    "Organisation" : "Manning School of Business, University of Massachusetts Lowell",
+    "date" : "July 2021",
+    "link": "https://www.uml.edu/msb/global-entrepreneurship/programs/workshops/past-workshops.aspx",
+    "description": "Won 1st prize in a business pitch competition with my team (6– 3 India, 2 USA, 1 Burma).",
+    "logo": umassLogo
+
+  },
+  { "name": "Global Entrepreneurship Exchange 2022",
+    "competition" : "Business Pitch Competition(Team leader)",
+    "Organisation" : "Manning School of Business, University of Massachusetts Lowell",
+    "date" : "June 2022",
+    "link": "https://www.uml.edu/msb/global-entrepreneurship/programs/workshops/past-workshops.aspx",
+    "description": "Won 1st prize in a business pitch competition with my team (6– 3 India, 2 USA, 1 Burma).",
+    "logo": umassLogo
   }
 ]
 
@@ -185,5 +246,8 @@ export {
   menuLinks,
   programmingLanguages,
   otherTechStacks,
-  sideProjects
+  sideProjects,
+  companies,
+  educations,
+  achivements
 }
