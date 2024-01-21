@@ -35,7 +35,7 @@ function Contact() {
     event.preventDefault()
     setIsLoading(true)
     try {
-      const response = await fetch("https://saipraveen.me/api/email/", {
+      const response = await fetch("https://services.saipraveen.me/api/email/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
