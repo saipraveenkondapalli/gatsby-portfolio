@@ -7,10 +7,12 @@ import { Container, Divider } from "@chakra-ui/react"
 import "../styles/Home.module.css"
 import TechStack from "../components/index/TechStack"
 import { SideProjectSection } from "../components/index/Projects"
+import WelcomeMessage from "../components/WelcomeMessage"
 
 const IndexPage = () => (
   <Layout>
     <Container maxW="container.lg" mt={["5", "10"]} mb={["5", "10"]}>
+      <WelcomeMessage />
       <ProfileSection />
       <Divider my={10} />
       <TechStack />
