@@ -15,7 +15,7 @@ function WelcomeMessage() {
 
 
     if (id) {
-      fetch(`http://localhost:8000/main_site/job/track/?id=${id}`)
+      fetch(`https://services.saipraveen.me/main_site/job/track/?id=${id}`)
         .then(response => response.json())
         .then(data => {
           console.log(data)
