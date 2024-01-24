@@ -1,5 +1,15 @@
 {
-    "globalHeaders": {
-        "Content-Security-Policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self';"
-    }
+    "responseOverrides": {
+        "404": {
+            "rewrite": "/404.html",
+            "statusCode": 404
+        }
+    },
+    "routes": [
+        {
+            "route": "/404",
+            "rewrite": "/404.html"
+        }
+    ],
+    "trailingSlash": "always"
 }
