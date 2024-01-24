@@ -1,0 +1,15 @@
+{
+    "responseOverrides": {
+        "404": {
+            "rewrite": "/404.html",
+            "statusCode": 404
+        }
+    },
+    "routes": [
+        {
+            "route": "/404",
+            "rewrite": "/404.html"
+        }
+    ],
+    "trailingSlash": "always"
+}

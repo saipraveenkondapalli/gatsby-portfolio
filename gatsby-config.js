@@ -66,6 +66,7 @@ module.exports = {
         purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
       }
     },
-    `gatsby-plugin-minify`
+    `gatsby-plugin-minify`,
   ],
+
 }

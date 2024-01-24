@@ -16,3 +16,17 @@ exports.createPages = async ({ actions }) => {
     defer: true,
   })
 }
+
+exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
+
+  if (getConfig().mode === 'production') {
+
+    actions.setWebpackConfig({
+
+      devtool: false
+
+    });
+
+  }
+
+};
