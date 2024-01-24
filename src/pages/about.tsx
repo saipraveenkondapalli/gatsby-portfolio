@@ -9,6 +9,7 @@ import { PageSlideFade, StaggerChildren } from "../utils/page-transitions"
 import Layout from "../components/layout"
 import { FaTrophy } from "react-icons/fa6"
 import AchivementCard from "../components/AchivementCard"
+import Seo from "../components/seo"
 
 function About() {
   const { colorMode } = useColorMode()
@@ -109,5 +110,7 @@ function About() {
     </Layout>
   )
 }
+
+export const Head = () => <Seo title="About" description={"Learn about my carrer, experience and achivments."} children={undefined}></Seo>
 
 export default About

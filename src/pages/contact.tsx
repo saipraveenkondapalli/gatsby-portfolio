@@ -16,6 +16,7 @@ import {
   useToast
 } from "@chakra-ui/react"
 
+import Seo from "../components/seo"
 import "../styles/Home.module.css"
 import ErrorMessage from "../components/ErrorMessage"
 import Layout from "../components/layout"
@@ -157,5 +158,7 @@ function Contact() {
 
   )
 }
+
+export const Head = () => <Seo title="Contact" description={"Contact me."} children={undefined}></Seo>
 
 export default Contact
