@@ -68,18 +68,5 @@ module.exports = {
     },
     `gatsby-plugin-minify`,
   ],
-  
-  flags:{
-    PRESERVE_WEBPACK_CACHE: true,
-    PRESERVE_FILE_DOWNLOAD_CACHE: true,
-    PARALLEL_SOURCING: true,
-    FAST_DEV: true,
-    DEV_SSR: true,
-    PRESERVE_HTML_AND_CSS: true,
-    LAZY_IMAGES: true,
-    QUERY_ON_DEMAND: true,
-    FAST_REFRESH: true,
-    NO_EXTERNAL_MAP: true,
-  }
 
 }
