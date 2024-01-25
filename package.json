@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.11.0",
     "framer-motion": "^10.18.0",
     "gatsby": "^5.13.1",
+    "gatsby-plugin-csp": "^1.1.4",
     "gatsby-plugin-image": "^3.13.0",
     "gatsby-plugin-manifest": "^5.13.0",
     "gatsby-plugin-minify": "^0.5.0",
@@ -37,7 +38,7 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop -p 1801",
+    "develop": "gatsby develop -p 1801 -H 0.0.0.0",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
     "start": "gatsby develop",
     "serve": "gatsby serve",

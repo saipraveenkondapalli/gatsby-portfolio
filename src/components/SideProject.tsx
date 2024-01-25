@@ -35,7 +35,7 @@ export const SideProjectCard: React.FC<ISideProjectCard> = ({ project }) => {
               maxH={"210px"}
               h={"210px"}
               w="full"
-             alt={project.alt}/>
+                alt={project.alt} />
           </Box>
           <Stack mb={3}>
             <Text
@@ -53,7 +53,7 @@ export const SideProjectCard: React.FC<ISideProjectCard> = ({ project }) => {
           {project.tech.map((tech, index) => {
             const techStack = allTechStacks.find(stack => stack.name === tech);
             return (
-              <Tag size="sm" padding="10px" key={index} mx={1}>
+              <Tag size="sm" padding="10px" key={index} mb={2} mx={1}>
                 {techStack ? <Circle size="30px">{techStack.icon}</Circle> : tech}
               </Tag>
             );
