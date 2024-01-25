@@ -50,15 +50,17 @@ const CompanyCard: React.FC<ICompanyCard> = ({ company, colorMode }) => {
                 isInline
                 display={["flex", "flex", "flex", "flex"]}
               >
-                {company.skills.map((skill) => (
-                  <Tag size="sm" padding="0 5px" key={skill}>
-                    {skill}
-                  </Tag>
-                ))}
+                <Flex flexWrap="wrap">
+                  {company.skills.map((skill, index) => (
+                    <Tag key={index} size="sm" mx={1} my={1} borderRadius="5px">
+                      {skill}
+                    </Tag>
+                  ))}
+                </Flex>
               </Stack>
             </Stack>
           </Flex>
-          <Stack display={["none", "none", "flex", "flex"]}>
+          <Stack display={"flex"}>
             <Text fontSize={14} color={`mode.${colorMode}.career.subtext`}>
               {company.period}
             </Text>
