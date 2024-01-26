@@ -41,7 +41,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
         left="5px"
         top="50%"
         onClick={prevImage}
-        bgColor="aquamarine" // semi-transparent white background
+        bgColor="black" // semi-transparent white background
       />
       <IconButton
         aria-label="Next image"
@@ -50,7 +50,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
         right="5px"
         top="50%"
         onClick={nextImage}
-        bgColor="aquamarine" // semi-transparent white background
+        bgColor="black" // semi-transparent white background
       />
     </Box>
   )

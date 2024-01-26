@@ -3,6 +3,9 @@ import Layout from "../components/layout"
 import { Box, Button, Container, Heading, Image, ListItem, UnorderedList } from "@chakra-ui/react"
 // @ts-ignore
 import interviewPrepPro from "../images/interview.png"
+// @ts-ignore
+import studentClub from "../images/studentClub.jpg"
+
 import { FaExternalLinkAlt } from "react-icons/fa"
 import ImageCarousel from "../components/ImageCarousel"
 
@@ -11,6 +14,7 @@ function InterviewPrepPro() {
     <Layout>
       <Container maxW="container.lg" mt={["5", "10"]} mb={["5", "10"]}>
         <Heading as={"h1"} color={"yellow.400"} mb={5}>Interview Prep Pro</Heading>
+        <Heading as={"h2"} fontSize={"xl"}  color={"yellow.400"} mt={10} mb={5}>Tech Stack</Heading>
         <Image src={interviewPrepPro}></Image>
         <Box display={"flex"} justifyContent="center">
           <Button p={5} as="a" href="https://interviewprep.pro" target="_blank" iconSpacing={2}
@@ -74,7 +78,8 @@ function InterviewPrepPro() {
             </UnorderedList>
 
           </Box>
-          <ImageCarousel images={[interviewPrepPro, interviewPrepPro, interviewPrepPro]}></ImageCarousel>
+
+          <Box mt={4} borderRadius={5}><ImageCarousel images={[interviewPrepPro, studentClub, interviewPrepPro]}></ImageCarousel></Box>
 
         </Box>
       </Container>
