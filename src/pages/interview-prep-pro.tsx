@@ -1,12 +1,12 @@
 import * as React from "react"
-import Layout from "../components/layout"
+
 import { Box, Button, Container, Heading, Image, ListItem, UnorderedList } from "@chakra-ui/react"
 // @ts-ignore
 import interviewPrepPro from "../images/interview.png"
 // @ts-ignore
-import studentClub from "../images/studentClub.jpg"
 
 import { FaExternalLinkAlt } from "react-icons/fa"
+import Layout from "../components/Layout"
 
 
 function InterviewPrepPro() {

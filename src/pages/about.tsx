@@ -6,10 +6,11 @@ import { MotionBox } from "../utils/motion"
 import { achivements, companies, educations } from "../constant"
 import CompanyCard from "../components/CompanyCard"
 import { PageSlideFade, StaggerChildren } from "../utils/page-transitions"
-import Layout from "../components/layout"
+
 import { FaTrophy } from "react-icons/fa6"
 import AchivementCard from "../components/AchivementCard"
 import Seo from "../components/seo"
+import Layout from "../components/Layout"
 
 function About() {
   const { colorMode } = useColorMode()

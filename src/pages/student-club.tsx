@@ -9,10 +9,10 @@ import img2 from "../images/student/img2.png"
 // @ts-ignore
 import img3 from "../images/student/img3.png"
 
-import Layout from "../components/Layout"
 
 import { FaExternalLinkAlt } from "react-icons/fa"
 import ImageCarousel from "../components/ImageCarousel"
+import Layout from "../components/Layout"
 
 
 function StudentClub() {
@@ -68,7 +68,7 @@ function StudentClub() {
               <ImageCarousel images={[img1, img2, img3]} />
             </Box>
             <Alert status={"warning"}>
-              <AlertIcon/>
+              <AlertIcon />
               This website is accessible only on college intranet.
             </Alert>
           </Box>
