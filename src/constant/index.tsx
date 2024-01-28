@@ -159,6 +159,7 @@ const sideProjects = [
     name: "Interview Prep Pro",
     imageUrl: interviewPrepPro,
     alt: "Interview Prep Pro",
+    link: "/interview-prep-pro",
     summary: "\"Interview Prep Pro\" is a project that helps individuals prepare for coding interviews at top technology companies. It features over 1200 coding questions from 150+ companies, organized by category and company. It also includes links to Leetcode problems and has a feature that allows users to contribute questions to keep the resource relevant to the current job market.",
     tech: [
       <FaPython fontSize="20px" />,
@@ -178,7 +179,7 @@ const sideProjects = [
     alt: "student club portal",
     summary:
       "\"Student Club Portal\" is a website aimed at streamlining and automating the management of activities for the \"Press Club\" at Pragati Engineering College in Surampalem, India. The website provides an efficient and organized platform to handle various club-related tasks, including report writing, grammatical checking, attendance tracking, and more.",
-    link: "https://nextjs-3commasclub-frontend.vercel.app/",
+    link: "/student-club",
     tech: [
       <FaPython fontSize="20px" />,
       <SiFlask fontSize="20px" />,

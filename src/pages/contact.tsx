@@ -19,7 +19,8 @@ import {
 import Seo from "../components/seo"
 import "../styles/Home.module.css"
 import ErrorMessage from "../components/ErrorMessage"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
+
 
 
 function Contact() {
