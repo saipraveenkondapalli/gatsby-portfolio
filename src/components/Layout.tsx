@@ -6,30 +6,20 @@
  */
 
 import * as React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+
 
 import NavBar from "./header"
 
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
 
   return (
     <>
-      <NavBar siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <NavBar />
 
       <main>{children}</main>
       <footer>
       </footer>
-
 
     </>
   )

@@ -7,7 +7,7 @@ import interviewPrepPro from "../images/interview.png"
 import studentClub from "../images/studentClub.jpg"
 
 import { FaExternalLinkAlt } from "react-icons/fa"
-import ImageCarousel from "../components/ImageCarousel"
+
 
 function InterviewPrepPro() {
   return (
@@ -79,7 +79,7 @@ function InterviewPrepPro() {
 
           </Box>
 
-          <Box mt={4} borderRadius={5}><ImageCarousel images={[interviewPrepPro, studentClub, interviewPrepPro]}></ImageCarousel></Box>
+
 
         </Box>
       </Container>
