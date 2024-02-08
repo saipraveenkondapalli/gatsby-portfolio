@@ -47,15 +47,15 @@ import "../../styles/blog.css"
 import YouTubeModal from "../../components/YoutubeModal"
 import Prism from "prismjs"
 import "prismjs/themes/prism.css"
-import CodeBlock from "../../components/CodeBlock"
-import Commands from "../../components/commands"
-import CodeVariable from "../../components/codeVariable"
+import CodeBlock from "../../components/blog/CodeBlock"
+import Commands from "../../components/blog/commands"
+import CodeVariable from "../../components/blog/codeVariable"
 
 function DeployDjangoOnAzureVm() {
   useEffect(() => {
     // call the highlightAll() function to style our code blocks
     Prism.highlightAll()
-  })
+  },[])
 
   return (
     <Layout>
@@ -135,7 +135,7 @@ function DeployDjangoOnAzureVm() {
           </Text>
 
           <Code mt={5} p={3} width={"100%"} rounded="md">
-            git clone https://github.com/saipraveen.dev.acc/django-azure-vm.git
+            git clone https://github.com/code-with-saipraveeen/azure-django.git
           </Code>
         </section>
         <section id={"architecture"}>
@@ -538,9 +538,12 @@ function DeployDjangoOnAzureVm() {
 export const Head = () => (
   <Seo
     title="Deploy Django Site on Azure, AWS, GCP Virtual Machine"
-    description={"Deploy Django Site on Azure, AWS, GCP Virtual Machine using Nginx, Gunicorn, WhiteNoise, and Python Virtual Environment."}
-    children={undefined}
-  ></Seo>
+    description={
+      "Deploy Django Site on Azure, AWS, GCP Virtual Machine using Nginx, Gunicorn, WhiteNoise, and Python Virtual Environment."
+    }
+  >
+
+  </Seo>
 )
 
 export default DeployDjangoOnAzureVm

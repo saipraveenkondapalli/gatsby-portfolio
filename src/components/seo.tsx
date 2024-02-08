@@ -32,11 +32,12 @@ function Seo({ description, title, children }) {
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
-      <meta property="og:type" content="website" />
+      <meta property="og:type" content="website" /> 
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:creator" content={site.siteMetadata?.author || ``} />
+      <meta name="twitter:creator" content="@saipraveen707" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
+
       {children}
     </>
   )
