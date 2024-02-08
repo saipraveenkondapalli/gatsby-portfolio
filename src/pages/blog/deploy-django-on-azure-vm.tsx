@@ -276,7 +276,7 @@ function DeployDjangoOnAzureVm() {
                         <Code mt={5} p={3} width={"100%"} rounded="md">
                           icacls.exe .\passkey.pem /inheritance:r <br />
                           icacls.exe .\passkey.pem /grant:r
-                          "$($env:USERNAME):(R)
+                          "$($env:USERNAME):(R)"
                         </Code>
                       </TabPanel>
                     </TabPanels>
@@ -538,7 +538,7 @@ function DeployDjangoOnAzureVm() {
 export const Head = () => (
   <Seo
     title="Deploy Django Site on Azure, AWS, GCP Virtual Machine"
-    description={""}
+    description={"Deploy Django Site on Azure, AWS, GCP Virtual Machine using Nginx, Gunicorn, WhiteNoise, and Python Virtual Environment."}
     children={undefined}
   ></Seo>
 )
