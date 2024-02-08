@@ -51,9 +51,6 @@ import CodeBlock from "../../components/CodeBlock"
 import Commands from "../../components/commands"
 import CodeVariable from "../../components/codeVariable"
 
-
-
-
 function DeployDjangoOnAzureVm() {
   useEffect(() => {
     // call the highlightAll() function to style our code blocks
@@ -87,17 +84,42 @@ function DeployDjangoOnAzureVm() {
             Contents
           </Heading>
           <UnorderedList my={3} p={2}>
-            <ListItem><a href={'#introduction'}>Introduction</a></ListItem>
-            <ListItem><a href={'#architecture'}>Architecture</a></ListItem>
-            <ListItem><a href={'#prerequisites'}>Prerequisites</a></ListItem>
-            <ListItem><a href={'#1.create-virtual-environment'}>1.Create a Virtual Machine</a></ListItem>
-            <ListItem><a href={'#2.config-django-settings-for-production'}>2.Config Django Settings for Production</a></ListItem>
-            <ListItem><a href={'#3.upload-code-to-server'}>3.Upload Code to Server</a></ListItem>
             <ListItem>
-              <a href={'#4.environmental-variables-static-files-and-gunicorn'}>4.Environmental Variables, Static Files</a> & Gunicorn
+              <a href={"#introduction"}>Introduction</a>
             </ListItem>
-            <ListItem><a href={'#5.nginx'}>5.Nginx</a></ListItem>
-            <ListItem><a href={'#6.check-and-test-django-site'}>6.Check & test django site</a></ListItem>
+            <ListItem>
+              <a href={"#architecture"}>Architecture</a>
+            </ListItem>
+            <ListItem>
+              <a href={"#prerequisites"}>Prerequisites</a>
+            </ListItem>
+            <ListItem>
+              <a href={"#1.create-virtual-environment"}>
+                1.Create a Virtual Machine
+              </a>
+            </ListItem>
+            <ListItem>
+              <a href={"#2.config-django-settings-for-production"}>
+                2.Config Django Settings for Production
+              </a>
+            </ListItem>
+            <ListItem>
+              <a href={"#3.upload-code-to-server"}>3.Upload Code to Server</a>
+            </ListItem>
+            <ListItem>
+              <a href={"#4.environmental-variables-static-files-and-gunicorn"}>
+                4.Environmental Variables, Static Files
+              </a>{" "}
+              & Gunicorn
+            </ListItem>
+            <ListItem>
+              <a href={"#5.nginx"}>5.Nginx</a>
+            </ListItem>
+            <ListItem>
+              <a href={"#6.check-and-test-django-site"}>
+                6.Check & test django site
+              </a>
+            </ListItem>
           </UnorderedList>
         </section>
         <section id={"introduction"}>
@@ -116,23 +138,25 @@ function DeployDjangoOnAzureVm() {
             git clone https://github.com/saipraveen.dev.acc/django-azure-vm.git
           </Code>
         </section>
-        <section id={'architecture'}>
+        <section id={"architecture"}>
           <Heading as={"h2"} mt={2}>
             Architecture{" "}
           </Heading>
           <Image mt={2} src={architectureImg} />
         </section>
 
-        <section id={'prerequisites'}><Heading as={"h2"} mt={2}>
-          Prerequisites
-        </Heading>
+        <section id={"prerequisites"}>
+          <Heading as={"h2"} mt={2}>
+            Prerequisites
+          </Heading>
           <Text mt={5}>
             <UnorderedList>
               <ListItem>Azure/AWS/GCP/other cloud provider Account</ListItem>
             </UnorderedList>
-          </Text></section>
+          </Text>
+        </section>
 
-        <section id={'1.create-virtual-environment'}>
+        <section id={"1.create-virtual-environment"}>
           <Heading as={"h2"} mt={5}>
             1.Create a Virtual Machine
           </Heading>
@@ -145,7 +169,7 @@ function DeployDjangoOnAzureVm() {
               <UnorderedList>
                 <ListItem>
                   <Link
-                    color={'teal'}
+                    color={"teal"}
                     colorScheme={"blue"}
                     href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-portal"
                     target="_blank"
@@ -156,7 +180,7 @@ function DeployDjangoOnAzureVm() {
                 </ListItem>
                 <ListItem>
                   <Link
-                    color={'teal'}
+                    color={"teal"}
                     href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -166,7 +190,7 @@ function DeployDjangoOnAzureVm() {
                 </ListItem>
                 <ListItem>
                   <Link
-                    color={'teal'}
+                    color={"teal"}
                     href="https://cloud.google.com/compute/docs/quickstart-linux"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -231,9 +255,8 @@ function DeployDjangoOnAzureVm() {
                 <ListItem>
                   (Optional) If you face{" "}
                   <Code colorScheme={"red"}>
-                    {" "}
-                    WARNING: UNPROTECTED PRIVATE KEY FILE!{" "}
-                  </Code>{" "}
+                    WARNING: UNPROTECTED PRIVATE KEY FILE!
+                  </Code>
                   in the terminal then try to run the following command. This
                   error occurs when more than one user on the system has access
                   to the private key file.
@@ -264,7 +287,7 @@ function DeployDjangoOnAzureVm() {
           </OrderedList>
         </section>
 
-        <section id={'2.config-django-settings-for-production'}>
+        <section id={"2.config-django-settings-for-production"}>
           <Heading as={"h2"} mt={5}>
             2.Config Django Settings for Production{" "}
           </Heading>
@@ -325,7 +348,7 @@ function DeployDjangoOnAzureVm() {
           </OrderedList>
         </section>
 
-        <section id={'3.upload-code-to-server'}>
+        <section id={"3.upload-code-to-server"}>
           <Heading as={"h2"} mt={5}>
             Step 3: Upload Code to Server
           </Heading>
@@ -380,7 +403,7 @@ function DeployDjangoOnAzureVm() {
             </ListItem>
           </OrderedList>
         </section>
-        <section id={'4.environmental-variables-static-files-and-gunicorn'}>
+        <section id={"4.environmental-variables-static-files-and-gunicorn"}>
           <Heading as={"h2"} mt={5}>
             4.Environmental Variables, Static Files & Gunicorn
           </Heading>
@@ -409,7 +432,7 @@ function DeployDjangoOnAzureVm() {
             </ListItem>
           </OrderedList>
         </section>
-        <section id={'5.nginx'}>
+        <section id={"5.nginx"}>
           <Heading as={"h2"} mt={5}>
             Step 5: Nginx
           </Heading>
@@ -481,14 +504,15 @@ function DeployDjangoOnAzureVm() {
           </OrderedList>
         </section>
 
-        <section id={'6.check-and-test-django-site'}>
+        <section id={"6.check-and-test-django-site"}>
           <Heading as="h2" mt={5}>
             6.Check & test django site
           </Heading>
           <Text mt={2}>
             Type your VM <CodeVariable>ip-address</CodeVariable> in the browser.
-            If you face any error stop the gunicorn service and change the
-            environment variable <CodeVariable>DEBUG=True</CodeVariable>
+            If you face any error(s), stop the gunicorn service and change the
+            environment variable <CodeVariable>DEBUG=True</CodeVariable> in{" "}
+            <CodeVariable>settings.py</CodeVariable>
           </Text>
           <Image src={browserImg} mt={2} />
         </section>
@@ -518,6 +542,5 @@ export const Head = () => (
     children={undefined}
   ></Seo>
 )
-
 
 export default DeployDjangoOnAzureVm
