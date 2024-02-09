@@ -22,8 +22,31 @@ import BlogList from "../../components/blog/BlogList"
 import BlogListItem from "../../components/blog/BlogListItem"
 import BlogLink from "../../components/blog/BlogLink"
 import CodeBlock from "../../components/blog/CodeBlock"
+import BlogContent, { BlogContentList } from "../../components/blog/BlogContent"
 
 function FreeSslCertificateOnAzureAwsGcpVpsHosting() {
+  const contentList: BlogContentList[] = [
+    {
+      title: "Introduction",
+      url: "#introduction",
+    },
+    {
+      title: "Deploy website on Virtual Machine(VM)",
+      url: "#Deploy-website",
+    },
+    {
+      title: "Install Nginx & Assign Domain Name",
+      url: "#Install-nginx",
+    },
+    {
+      title: "Install Certbot & Generate SSL Certificate",
+      url: "#Install-certbot",
+    },
+    {
+      title: "Conclusion",
+      url: "#conclusion",
+    },
+  ]
   return (
     <>
       <BlogLayout>
@@ -33,6 +56,7 @@ function FreeSslCertificateOnAzureAwsGcpVpsHosting() {
         </Heading>
         <BlogLastUpdated dateTime={"2024-02-08T12:30:00Z"} />
         <BlogImage src={SSLImage} alt={"certbot-free-ssl-certificate"} />
+        <BlogContent contentList={contentList} />
 
         <BlogSection id={"introduction"}>
           <BlogHeading>Introduction</BlogHeading>
@@ -309,6 +333,13 @@ server {
               <Commands>sudo systemctl restart nginx</Commands>
             </BlogListItem>
           </BlogList>
+        </BlogSection>
+        <BlogSection id={"conclusion"}>
+          <BlogHeading>Conclusion</BlogHeading>
+          <BlogText>
+            In this article, we have learned how to add SSL certificate to
+            website running Nginx web server on Virtual Machine(VM) using Certbot.
+          </BlogText>
         </BlogSection>
       </BlogLayout>
     </>
