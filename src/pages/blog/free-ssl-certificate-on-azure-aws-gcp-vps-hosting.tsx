@@ -23,6 +23,7 @@ import BlogListItem from "../../components/blog/BlogListItem"
 import BlogLink from "../../components/blog/BlogLink"
 import CodeBlock from "../../components/blog/CodeBlock"
 import BlogContent, { BlogContentList } from "../../components/blog/BlogContent"
+import Seo from "../../components/seo"
 
 function FreeSslCertificateOnAzureAwsGcpVpsHosting() {
   const contentList: BlogContentList[] = [
@@ -338,12 +339,95 @@ server {
           <BlogHeading>Conclusion</BlogHeading>
           <BlogText>
             In this article, we have learned how to add SSL certificate to
-            website running Nginx web server on Virtual Machine(VM) using Certbot.
+            website running Nginx web server on Virtual Machine(VM) using
+            Certbot.
           </BlogText>
         </BlogSection>
       </BlogLayout>
     </>
   )
 }
+
+export const Head = () => (
+  <Seo
+    title="Free SSL Certificate on Azure, AWS, GCP, Virtual Machine(VM) and VPS hosting websites"
+    description={
+      "In this article, we will learn about how to install free SSL certificate on Azure, AWS, GCP, Virtual Machine(VM) and VPS Linux hosting websites. I am using Ubuntu 22.04 LTS with Nginx on Azure, but you can use any other Linux distribution. For the sake of simplicity, I will deploy a static single page HTML site on the Virtual Machine(VM)."
+    }
+  >
+    <script type={"application/ld+json"}>
+      {`
+     {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "datePublished": "2024-02-07",
+  "publisher": {
+    "@type": "Individual",
+    "name": "Sai Praveen Kondapalli",
+    "url": "https://saipraveen.me",
+    "logo": "https://saipraveen.me/logo.png"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://saipraveen.me/blog/free-ssl-certificate-on-azure-aws-gcp-vps-hosting"
+  },
+  "headline": "Free SSL Certificate on Azure, AWS, GCP, Virtual Machine(VM) and VPS hosting websites",
+  "description": "In this article, we will learn about how to install free SSL certificate on Azure, AWS, GCP, Virtual Machine(VM) and VPS Linux hosting websites. I am using Ubuntu 22.04 LTS with Nginx on Azure, but you can use any other Linux distribution. For the sake of simplicity, I will deploy a static single page HTML site on the Virtual Machine(VM).",
+  "hasPart": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Blog",
+          "item": "https://saipraveen.me/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Deploy Django Site on Azure, AWS, GCP Virtual Machine",
+          "item": "https://saipraveen.me/blog/free-ssl-certificate-on-azure-aws-gcp-vps-hosting"
+        }
+      ]
+    },
+    {
+      "@type": "TableOfContents",
+      "position": 1,
+      "name": "Introduction",
+      "url": "https://saipraveen.me/blog/free-ssl-certificate-on-azure-aws-gcp-vps-hosting#introduction"
+    },
+    {
+      "@type": "TableOfContents",
+      "position": 2,
+      "name": "Deploy website on Virtual Machine(VM)",
+      "url": "https://saipraveen.me/blog/free-ssl-certificate-on-azure-aws-gcp-vps-hosting#Deploy-website"
+    },
+    {
+      "@type": "TableOfContents",
+      "position": 3,
+      "name": "Install Nginx & Assign Domain Name",
+      "url": "https://saipraveen.me/blog/free-ssl-certificate-on-azure-aws-gcp-vps-hosting#Install-nginx"
+    },
+    {
+      "@type": "TableOfContents",
+      "position": 4,
+      "name": "Install Certbot & Generate SSL Certificate",
+      "url": "https://saipraveen.me/blog/free-ssl-certificate-on-azure-aws-gcp-vps-hosting#Install-certbot"
+    },
+    {
+      "@type": "TableOfContents",
+      "position": 5,
+      "name": "Conclusion",
+      "url": "https://saipraveen.me/blog/free-ssl-certificate-on-azure-aws-gcp-vps-hosting#conclusion"
+    }
+  ]
+}
+
+        
+      `}
+    </script>
+  </Seo>
+)
 
 export default FreeSslCertificateOnAzureAwsGcpVpsHosting

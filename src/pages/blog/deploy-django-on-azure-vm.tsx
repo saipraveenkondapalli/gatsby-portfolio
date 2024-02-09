@@ -22,9 +22,9 @@ import gunicornServiceImg from "../../images/blog/azure-vm/gunicorn.png" //@ts-i
 import envImg from "../../images/blog/azure-vm/env.png" //@ts-ignore
 import architectureImg from "../../images/blog/azure-vm/azure.jpg" //@ts-ignore
 import browserImg from "../../images/blog/azure-vm/browser.png"
-import "../../styles/blog.css"
+
 import YouTubeModal from "../../components/YoutubeModal"
-import "prismjs/themes/prism.css"
+
 import CodeBlock from "../../components/blog/CodeBlock"
 import Commands from "../../components/blog/commands"
 import CodeVariable from "../../components/blog/codeVariable"
@@ -78,7 +78,7 @@ function DeployDjangoOnAzureVm() {
 
   return (
     <BlogLayout>
-      <Heading as={'h1'}>
+      <Heading as={"h1"}>
         Tutorial: Deploy Django Site on Azure, AWS, GCP Virtual Machine (VM)
       </Heading>
       <BlogLastUpdated dateTime={"2024-02-06"} />
@@ -466,99 +466,100 @@ export const Head = () => (
   >
     <script type={"application/ld+json"}>
       {`{
-        "@context": "https://schema.org",
-        "@type": "Article",
-        headline: "Deploy Django Site on Azure, AWS, GCP Virtual Machine",
-        datePublished: "2024-02-06",
-        author: {
-          "@type": "Person",
-          name: "Sai Praveen Kondapalli",
-        },
-        publisher: {
-  "@type": "Individual",
-  name: "Sai Praveen Kondapalli",
-  url: "https://saipraveen.me",
-  logo: "https://saipraveen.me/logo.png"
-  
-        },
-        "mainEntityOfPage": {
-        "@type": "WebPage",
-          "@id": "https://saipraveen.me/blog/deploy-django-on-azure-vm",
-        },
-        "articleBody": "Deploy Django Site on Azure, AWS, GCP Virtual Machine using Nginx, Gunicorn, WhiteNoise, and Python Virtual Environment."
-        "hasPart": {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Blog",
-            "item": "https://saipraveen.me/blog"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Deploy Django Site on Azure, AWS, GCP Virtual Machine",
-            "item": "https://saipraveen.me/blog/deploy-django-on-azure-vm"
-          }
-        ]
-        },
-        {
-        "@type": "TableOfContents",
-        "Position":1,
-        "name":"Introduction",
-        "url": "https://saipraveen.me/blog/deploy-django-on-azure-vm#introduction"
-        },
-        {
-        "@type": "TableOfContents",
-        "Position":2,
-        "name":"Architecture",
-        "url": "https://saipraveen.me/blog/deploy-django-on-azure-vm#architecture"
-        },
-        {
-        "@type": "TableOfContents",
-        "Position":3,
-        "name":"Prerequisites",
-"url": "https://saipraveen.me/blog/deploy-django-on-azure-vm#prerequisites"
-        },
-        {
-        "@type": "TableOfContents",
-        "Position":4,
-        "name":"Create a Virtual Machine",
-"url": "https://saipraveen.me/blog/deploy-django-on-azure-vm#1.create-virtual-environment"
-        },
-        {
-        "@type": "TableOfContents",
-        "Position":5,
-        "name":"Config Django Settings for Production",
-"url": "https://saipraveen.me/blog/deploy-django-on-azure-vm#2.config-django-settings-for-production"
-        },
-        {
-        "@type": "TableOfContents",
-"Position":6,
-"name":"Upload Code to Server",
-"url": "https://saipraveen.me/blog/deploy-django-on-azure-vm#3.upload-code-to-server"
-        },
-        {
-        "@type": "TableOfContents",
-"Position":7,
-"name":"Environmental Variables, Static Files & Gunicorn",
-"url": "https://saipraveen.me/blog/deploy-django-on-azure-vm#4.environmental-variables-static-files-and-gunicorn"
-        },
-        {
-        "@type": "TableOfContents",
-"Position":8,
-"name":"Nginx",
-"url": "https://saipraveen.me/blog/deploy-django-on-azure-vm#5.nginx"
-        },
-        {
-        "@type": "TableOfContents",
-"Position":9, 
-"name":"Check & test django site",
-"url": "https://saipraveen.me/blog/deploy-django-on-azure-vm#6.check-and-test-django-site"
-        }
-        
-      }`}
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Deploy Django Site on Azure, AWS, GCP Virtual Machine",
+  "datePublished": "2024-02-06",
+  "author": {
+    "@type": "Person",
+    "name": "Sai Praveen Kondapalli"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Sai Praveen Kondapalli",
+    "url": "https://saipraveen.me",
+    "logo": "https://saipraveen.me/logo.png"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://saipraveen.me/blog/deploy-django-on-azure-vm"
+  },
+  "articleBody": "Deploy Django Site on Azure, AWS, GCP Virtual Machine using Nginx, Gunicorn, WhiteNoise, and Python Virtual Environment.",
+  "hasPart": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Blog",
+        "item": "https://saipraveen.me/blog"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Deploy Django Site on Azure, AWS, GCP Virtual Machine",
+        "item": "https://saipraveen.me/blog/deploy-django-on-azure-vm"
+      }
+    ]
+  },
+  "tableOfContents": [
+    {
+      "@type": "TableOfContents",
+      "position": 1,
+      "name": "Introduction",
+      "url": "https://saipraveen.me/blog/deploy-django-on-azure-vm#introduction"
+    },
+    {
+      "@type": "TableOfContents",
+      "position": 2,
+      "name": "Architecture",
+      "url": "https://saipraveen.me/blog/deploy-django-on-azure-vm#architecture"
+    },
+    {
+      "@type": "TableOfContents",
+      "position": 3,
+      "name": "Prerequisites",
+      "url": "https://saipraveen.me/blog/deploy-django-on-azure-vm#prerequisites"
+    },
+    {
+      "@type": "TableOfContents",
+      "position": 4,
+      "name": "Create a Virtual Machine",
+      "url": "https://saipraveen.me/blog/deploy-django-on-azure-vm#1.create-virtual-environment"
+    },
+    {
+      "@type": "TableOfContents",
+      "position": 5,
+      "name": "Config Django Settings for Production",
+      "url": "https://saipraveen.me/blog/deploy-django-on-azure-vm#2.config-django-settings-for-production"
+    },
+    {
+      "@type": "TableOfContents",
+      "position": 6,
+      "name": "Upload Code to Server",
+      "url": "https://saipraveen.me/blog/deploy-django-on-azure-vm#3.upload-code-to-server"
+    },
+    {
+      "@type": "TableOfContents",
+      "position": 7,
+      "name": "Environmental Variables, Static Files & Gunicorn",
+      "url": "https://saipraveen.me/blog/deploy-django-on-azure-vm#4.environmental-variables-static-files-and-gunicorn"
+    },
+    {
+      "@type": "TableOfContents",
+      "position": 8,
+      "name": "Nginx",
+      "url": "https://saipraveen.me/blog/deploy-django-on-azure-vm#5.nginx"
+    },
+    {
+      "@type": "TableOfContents",
+      "position": 9,
+      "name": "Check & test django site",
+      "url": "https://saipraveen.me/blog/deploy-django-on-azure-vm#6.check-and-test-django-site"
+    }
+  ]
+}
+`}
     </script>
   </Seo>
 )
