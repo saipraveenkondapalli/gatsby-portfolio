@@ -9,9 +9,9 @@ interface BlogListProps {
 
 const BlogList: React.FC<BlogListProps> = ({ type, children, props }) => {
   if (type === "ordered") {
-    return <OrderedList my={2} {...props}>{children}</OrderedList>
+    return <OrderedList my={2} p={2} {...props}>{children}</OrderedList>
   } else {
-    return <UnorderedList my={2} {...props}>{children}</UnorderedList>
+    return <UnorderedList my={2} p={2} {...props}>{children}</UnorderedList>
   }
 }
 
