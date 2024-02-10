@@ -1,18 +1,26 @@
 import * as React from "react"
-import { Box, Flex, IconButton, Link, Spacer, Stack, Text, useColorModeValue } from "@chakra-ui/react"
+import {
+  Box,
+  Flex,
+  IconButton,
+  Link,
+  Stack,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react"
 import { siteConfig } from "../constant"
 
 const iconProps = {
   variant: "ghost",
   size: "lg",
-  isRound: true
+  isRound: true,
 }
 
 const Footer = () => {
   return (
     <Stack
       as="footer"
-      isInline
+      direction={"row"}
       spacing={[1, 2]}
       p={4}
       justifyContent="space-between"
