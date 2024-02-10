@@ -77,7 +77,6 @@ const ProfileSection: React.FC<IProfileSection> = () => {
               Resume
             </Button>
           </Link>
-
         </ButtonGroup>
       </Box>
     </Box>
