@@ -13,7 +13,7 @@ import umassLogo from "../images/umass.svg"
 import IcLogo from "../images/inheritcloud.webp"
 
 import { FaDatabase, FaGitAlt, FaJs, FaReact } from "react-icons/fa"
-import { FaC, FaJava, FaPython } from "react-icons/fa6"
+import { FaC, FaGithub, FaJava, FaLinkedin, FaPython } from "react-icons/fa6"
 import {
   SiAmazonaws,
   SiAwslambda,
@@ -22,6 +22,7 @@ import {
   SiDocker,
   SiFirebase,
   SiFlask,
+  SiGmail,
   SiGoogle,
   SiMongodb,
   SiMysql,
@@ -256,6 +257,45 @@ const achivements = [
   },
 ]
 
+const siteConfig = {
+  copyright: `Copyright © ${new Date().getFullYear()} Sai Praveen Kondapalli. All Rights Reserved.`,
+  author: {
+    name: "Sai Praveen Kondapalli",
+    accounts: [
+      {
+        url: "https://github.com/saipraveenkondapalli/",
+        icon: <FaGithub />,
+        name: "Github",
+        type: "gray",
+      },
+      {
+        url: "https://www.linkedin.com/in/sai-praveen-kondapalli/",
+        icon: <FaLinkedin />,
+        name: "Linkedin",
+        type: "linkedin",
+      },
+      // {
+      //   url: "https://stackoverflow.com/users/12261890/teo",
+      //   icon: <FaStackOverflow />,
+      //   name: "StackOverflow",
+      //   type: "orange",
+      // },
+      // {
+      //   url: "https://skynight1996.medium.com/",
+      //   icon: <FaMedium />,
+      //   name: "Medium",
+      //   type: "gray",
+      // },
+      {
+        url: "mailto:saipraveenkondapalli@gmail.com",
+        icon: <SiGmail />,
+        name: "Gmail",
+        type: "red",
+      },
+    ],
+  },
+}
+
 export {
   menuLinks,
   programmingLanguages,
@@ -264,4 +304,5 @@ export {
   companies,
   educations,
   achivements,
+  siteConfig,
 }
