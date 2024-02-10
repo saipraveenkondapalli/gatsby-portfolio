@@ -38,7 +38,7 @@ const Footer = () => {
       >
         <Box textAlign="center">
           <Link
-            href="https://vercel.com?utm_source=sai-praveen-kondapalli&utm_campaign=oss"> Privacy Policy</Link>
+            href="/privacy-policy"> Privacy Policy</Link>
         </Box>
         <Text
           textAlign="center"
