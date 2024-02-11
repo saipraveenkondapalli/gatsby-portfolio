@@ -1,12 +1,21 @@
-"use client"
-
 import * as React from "react"
 import { Link } from "gatsby"
-import { Avatar, Box, Flex, HStack, IconButton, Link as CharkaLink, Stack, useColorModeValue } from "@chakra-ui/react"
+import {
+  Avatar,
+  Box,
+  Flex,
+  HStack,
+  IconButton,
+  Link as CharkaLink,
+  Stack,
+  useColorModeValue,
+} from "@chakra-ui/react"
 import { useDisclosure } from "@chakra-ui/hooks"
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons"
 import { menuLinks } from "../constant"
 import { ColorModeSwitcher } from "./ColorModeSwitcher"
+//@ts-ignore
+import ProfilePic from "../images/profile_picture.png"
 
 const NavBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -18,8 +27,10 @@ const NavBar = () => {
 
   const navItem = (
     <>
-      {menuLinks.map((link) => {
-        const isActive = typeof window != "undefined" && link.route === window.location.pathname
+      {menuLinks.map(link => {
+        const isActive =
+          typeof window != "undefined" &&
+          link.route === window.location.pathname
         return (
           <Link to={link.route} key={link.name}>
             <CharkaLink
@@ -29,7 +40,7 @@ const NavBar = () => {
               rounded={"md"}
               _hover={{
                 bg: hoverBgColor,
-                textDecoration: "none"
+                textDecoration: "none",
               }}
               bg={isActive ? activeBgColor : "none"}
               color={isActive ? activeColor : inactiveColor}
@@ -64,13 +75,14 @@ const NavBar = () => {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={"center"}>
-            <Link to={"/"}><Avatar
-              as={CharkaLink}
-              size="sm"
-
-              src="https://saipraveen.me/assets/img/profile1.png"
-              _hover={{ borderColor: "blue.500" }}
-            /></Link>
+            <Link to={"/"}>
+              <Avatar
+                as={CharkaLink}
+                size="sm"
+                src={ProfilePic}
+                _hover={{ borderColor: "blue.500" }}
+              />
+            </Link>
             <HStack as="nav" spacing="4" display={{ base: "none", md: "flex" }}>
               {navItem}
             </HStack>

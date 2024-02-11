@@ -3,6 +3,8 @@ import { Avatar, Box, Button, ButtonGroup, Heading, Link } from "@chakra-ui/reac
 import { BiDownload, BiPhoneCall } from "react-icons/bi"
 import { MotionFlex } from "../../utils/motion"
 import Paragraph from "../Paragraph"
+//@ts-ignore
+import ProfilePic from "../../images/profile_picture.png"
 
 interface IProfileSection {
 }
@@ -36,7 +38,7 @@ const ProfileSection: React.FC<IProfileSection> = () => {
         <MotionFlex alignItems={"flex-end"} whileHover={{ scale: 1.2 }}>
           <Avatar
             name="Sai Praveen Kondapalli"
-            src="/profile_picture.png"
+            src={ProfilePic}
             mb={5}
             size="lg"
           />
