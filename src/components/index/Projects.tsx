@@ -1,11 +1,17 @@
 import * as React from "react"
-import { Heading, SimpleGrid, SlideFade, Text, useColorModeValue } from "@chakra-ui/react"
+import {
+  Heading,
+  SimpleGrid,
+  SlideFade,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react"
 import { sideProjects } from "../../constant"
 import { SideProjectCard } from "../SideProject"
 import { Project } from "../../types/project"
 
 interface ILiveProjectSection {
-  project?: Project;
+  project?: Project
 }
 
 export const SideProjectSection: React.FC<ILiveProjectSection> = ({
@@ -14,7 +20,7 @@ export const SideProjectSection: React.FC<ILiveProjectSection> = ({
   return (
     <SlideFade in offsetY={80}>
       <Heading
-        as="h1"
+        as="h2"
         fontSize={{ base: "24px", md: "30px", lg: "36px" }}
         mb={3}
       >

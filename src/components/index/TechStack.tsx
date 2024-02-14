@@ -9,16 +9,16 @@ import {
   TabPanels,
   Tabs,
   Text,
-  useColorModeValue
+  useColorModeValue,
 } from "@chakra-ui/react"
 import StackCard from "../StackCard"
-import { otherTechStacks, programmingLanguages, webTechStacks } from "../../constant"
+import { otherTechStacks, programmingLanguages } from "../../constant"
 
 const TechStackSection = () => {
   return (
     <SlideFade in offsetY={80}>
       <Heading
-        as="h1"
+        as="h2"
         fontSize={{ base: "24px", md: "30px", lg: "36px" }}
         mb={3}
       >
