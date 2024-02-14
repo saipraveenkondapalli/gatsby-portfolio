@@ -14,9 +14,7 @@ interface ILiveProjectSection {
   project?: Project
 }
 
-export const SideProjectSection: React.FC<ILiveProjectSection> = ({
-                                                                    project
-                                                                  }) => {
+export const SideProjectSection: React.FC<ILiveProjectSection> = () => {
   return (
     <SlideFade in offsetY={80}>
       <Heading
@@ -34,7 +32,7 @@ export const SideProjectSection: React.FC<ILiveProjectSection> = ({
       </Text>
 
       <SimpleGrid columns={[1, 1, 2, 2]} mt={5}>
-        {sideProjects.map((project) => {
+        {sideProjects.map(project => {
           return <SideProjectCard key={project.name} project={project} />
         })}
       </SimpleGrid>
