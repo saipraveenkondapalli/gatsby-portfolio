@@ -18,14 +18,14 @@ const ProfileSection: React.FC<IProfileSection> = () => {
         opacity="0"
         initial={{
           opacity: 0,
-          translateX: 150
+          translateX: 150,
         }}
         animate={{
           opacity: 1,
           translateX: 0,
           transition: {
-            duration: 0.5
-          }
+            duration: 0.5,
+          },
         }}
       >
         <Heading
@@ -49,12 +49,23 @@ const ProfileSection: React.FC<IProfileSection> = () => {
         Software Developer
       </Paragraph>
       <Paragraph textProps={{ fontSize: "md", lineHeight: 1.6 }}>
-        I am an aspiring software engineer driven by a profound passion for solving intricate problems and a keen
-        interest in developing efficient solutions. With a strong analytical mindset, I approach challenges with a
-        curious and innovative outlook. Collaborating seamlessly within diverse teams, I communicate effectively and
-        contribute to collective success. My relentless pursuit of knowledge and growth fuels my desire to make a
-        meaningful impact in software engineering, where I aim to bring forth creative and transformative solutions to
-        address real-world needs.
+        I am a recent graduate with a bachelor's degree in technology. I was a
+        member of the press club at college where I primarily focused on
+        gathering and writing news articles. I have a passion for building
+        experiences that help others, I have applied my skills in react, python,
+        SQL, No SQL, MongoDB, AWS-cloud among other skills to various projects
+        at college, in Internship at EduSkills foundation and in my freelance
+        work at Inherit Cloud. <br />
+
+        I have experience in working with diverse teams with people from across
+        the world. In 2021, I participated in the Global Entrepreneurship
+        Exchange program, a leading workshop on entrepreneurship at Manning
+        School of business, USA. I collaborated with people and won the business
+        pitch competition in the first place. In 2022, I formed my own team and
+        guided them which ultimately led to the team winning the competition in
+        the first place.
+        <br />I am looking for entry level roles in the tech industry
+        with opportunities to learn skills and grow in the sector
       </Paragraph>
 
       <Box mt={5}>
@@ -69,7 +80,11 @@ const ProfileSection: React.FC<IProfileSection> = () => {
               Contact Me
             </Button>
           </Link>
-          <Link href={"https://bit.ly/saipraveen-resume"} isExternal={true} style={{ textDecoration: "none" }}>
+          <Link
+            href={"https://bit.ly/saipraveen-resume"}
+            isExternal={true}
+            style={{ textDecoration: "none" }}
+          >
             <Button
               colorScheme="blue"
               size="sm"
