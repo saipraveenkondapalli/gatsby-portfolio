@@ -81,7 +81,7 @@ const ProfileSection: React.FC<IProfileSection> = () => {
             </Button>
           </Link>
           <Link
-            href={"https://bit.ly/saipraveen-resume"}
+            href={"https://docs.google.com/document/d/1diBlrMZ6dI5QO__JPA1Y6CkLRxBTPjHWMX_u1mRE_jU/edit?usp=sharing"}
             isExternal={true}
             style={{ textDecoration: "none" }}
           >
