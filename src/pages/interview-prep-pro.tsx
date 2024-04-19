@@ -10,7 +10,7 @@ import {
   UnorderedList,
 } from "@chakra-ui/react"
 // @ts-ignore
-import interviewPrepPro from "../images/interview.png"
+import interviewPrepPro from "../images/ipp.png"
 // @ts-ignore
 import { FaExternalLinkAlt } from "react-icons/fa"
 import Layout from "../components/Layout"
@@ -30,7 +30,7 @@ function InterviewPrepPro() {
           <Button
             p={5}
             as="a"
-            href="https://interviewprep.pro"
+            href="https://interview-prep-pro.vercel.app"
             target="_blank"
             iconSpacing={2}
             rightIcon={<FaExternalLinkAlt />}

@@ -16,20 +16,33 @@ import { FaDatabase, FaGitAlt, FaJs, FaReact } from "react-icons/fa"
 import { FaC, FaGithub, FaJava, FaLinkedin, FaPython } from "react-icons/fa6"
 import {
   SiAmazonaws,
+  SiAuth0,
   SiAwslambda,
   SiBootstrap,
+  SiChakraui,
   SiDjango,
   SiDocker,
+  SiExpress,
   SiFirebase,
   SiFlask,
   SiGmail,
-  SiGoogle,
   SiMongodb,
   SiMysql,
+  SiNodedotjs,
   SiPython,
   SiSqlite,
   SiTypescript,
 } from "react-icons/si"
+import { TbBrandGatsby, TbBrandNextjs } from "react-icons/tb"
+import { Tooltip } from "@chakra-ui/react"
+
+const TooltipTechIcon = ({ children, label }) => {
+  return (
+    <Tooltip label={label}>
+      <span>{children}</span>
+    </Tooltip>
+  )
+}
 
 const menuLinks = [
   { name: "About Me", route: "/about" },
@@ -109,6 +122,16 @@ const programmingLanguages = [
     icon: <FaReact fontSize="20px" />,
     url: "https://reactjs.org/",
   },
+  {
+    name: "NextJS",
+    icon: <TbBrandNextjs fontSize="20px" />,
+    url: "https://nextjs.org/",
+  },
+  {
+    name: "Gatsby",
+    icon: <TbBrandGatsby fontSize="20px" />,
+    url: "https://www.gatsbyjs.com/",
+  },
 ]
 
 const otherTechStacks = [
@@ -162,14 +185,26 @@ const sideProjects = [
     alt: "Interview Prep Pro",
     link: "/interview-prep-pro",
     summary:
-      '"Interview Prep Pro" is a project that helps individuals prepare for coding interviews at top technology companies. It features over 1200 coding questions from 150+ companies, organized by category and company. It also includes links to Leetcode problems and has a feature that allows users to contribute questions to keep the resource relevant to the current job market.',
+      '"Interview Prep Pro" is a project that helps individuals prepare for coding interviews at top technology companies. It features over 1500 coding questions from 150+ companies, organized by category and company. It also includes links to Leetcode problems and has a feature that allows users to contribute questions to keep the resource relevant to the current job market.',
     tech: [
-      <FaPython fontSize="20px" />,
-      <SiFlask fontSize="20px" />,
-      <SiMongodb fontSize="20px" />,
-      <SiBootstrap fontSize="20px" />,
-      <SiGoogle fontSize="20px" />,
-      <FaJs fontSize="20px" />,
+      <TooltipTechIcon label={"Node JS"}>
+        <SiNodedotjs fontSize="20px" />
+      </TooltipTechIcon>,
+      <TooltipTechIcon label={"Express JS"}>
+        <SiExpress fontSize="20px" />
+      </TooltipTechIcon>,
+      <TooltipTechIcon label={"MongoDB"}>
+        <SiMongodb fontSize="20px" />
+      </TooltipTechIcon>,
+      <TooltipTechIcon label={"Chakra UI"}>
+        <SiChakraui fontSize="20px" />
+      </TooltipTechIcon>,
+      <TooltipTechIcon label={"Auth0"}>
+        <SiAuth0 fontSize="20px" />
+        </TooltipTechIcon>,
+       <TooltipTechIcon label={"Typescript"}>
+         <SiTypescript fontSize="20px" />
+       </TooltipTechIcon>
     ],
   },
 

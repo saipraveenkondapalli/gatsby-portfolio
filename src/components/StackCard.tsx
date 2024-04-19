@@ -33,17 +33,17 @@ const StackCard: React.FC<IStackCard> = ({ stack }) => {
             _groupHover={{ color: "blue.500" }}
             icon={stack?.icon}
           />
-          <LinkOverlay href={stack?.url} rel="noopener" isExternal>
+          {/*<LinkOverlay href={stack?.url} rel="noopener" isExternal>*/}
             <Flex alignItems="center">
               <Text size="sm" _hover={{ color: "blue.500" }}>
                 {stack?.name}
               </Text>
             </Flex>
-          </LinkOverlay>
+          {/*</LinkOverlay>*/}
         </Flex>
       </LinkBox>
     </MotionBox>
-  );
+  )
 };
 
 export default StackCard;
