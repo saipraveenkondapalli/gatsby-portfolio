@@ -13,7 +13,7 @@ import {
   Text,
   Textarea,
   useColorModeValue,
-  useToast
+  useToast,
 } from "@chakra-ui/react"
 
 import Seo from "../components/seo"
@@ -21,10 +21,7 @@ import "../styles/Home.module.css"
 import ErrorMessage from "../components/ErrorMessage"
 import Layout from "../components/Layout"
 
-
-
 function Contact() {
-
   const toast = useToast()
 
   const [name, setName] = useState("")
@@ -33,17 +30,25 @@ function Contact() {
   const [error, setError] = useState("")
   const [isLoading, setIsLoading] = useState(false)
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async event => {
     event.preventDefault()
     setIsLoading(true)
     try {
-      const response = await fetch("https://services.saipraveen.me/api/email/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ name, email, message })
-      })
+      const response = await fetch(
+        "https://saipraveenkondapalli.pythonanywhere.com/api/contact/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            email,
+            message,
+            site: "93d0ff9e-ecfd-4e3d-84ff-c0b6b2ff0d44",
+          }),
+        }
+      )
 
       if (!response.ok) {
         throw new Error("Network response was not ok")
@@ -54,7 +59,7 @@ function Contact() {
         description: "We've received your message.",
         status: "success",
         duration: 9000,
-        isClosable: true
+        isClosable: true,
       })
     } catch (error) {
       toast({
@@ -62,7 +67,7 @@ function Contact() {
         description: "Unable to send your message.",
         status: "error",
         duration: 9000,
-        isClosable: true
+        isClosable: true,
       })
     } finally {
       setIsLoading(false)
@@ -101,7 +106,7 @@ function Contact() {
                           value={name}
                           placeholder="Your Name"
                           size="lg"
-                          onChange={(event) => setName(event.currentTarget.value)}
+                          onChange={event => setName(event.currentTarget.value)}
                           bg={useColorModeValue("gray.100", "gray.900")}
                         />
                       </FormControl>
@@ -114,7 +119,7 @@ function Contact() {
                           value={email}
                           placeholder="Email"
                           size="lg"
-                          onChange={(event) =>
+                          onChange={event =>
                             setEmail(event.currentTarget.value)
                           }
                           bg={useColorModeValue("gray.100", "gray.900")}
@@ -128,7 +133,7 @@ function Contact() {
                           value={message}
                           placeholder="Type your message..."
                           size="lg"
-                          onChange={(event) =>
+                          onChange={event =>
                             setMessage(event.currentTarget.value)
                           }
                           bg={useColorModeValue("gray.100", "gray.900")}
@@ -154,12 +159,12 @@ function Contact() {
           </Container>
         </div>
       </main>
-
     </Layout>
-
   )
 }
 
-export const Head = () => <Seo title="Contact" description={"Contact me."} children={undefined}></Seo>
+export const Head = () => (
+  <Seo title="Contact" description={"Contact me."} children={undefined}></Seo>
+)
 
 export default Contact
