@@ -35,7 +35,7 @@ function Contact() {
     setIsLoading(true)
     try {
       const response = await fetch(
-        "https://saipraveenkondapalli.pythonanywhere.com/api/contact?site=08e8a207-4804-4002-aa9f-90e6b81a2b37",
+        "https://saipraveenkondapalli.pythonanywhere.com/api/contact/?site=08e8a207-4804-4002-aa9f-90e6b81a2b37",
         {
           method: "POST",
           headers: {
